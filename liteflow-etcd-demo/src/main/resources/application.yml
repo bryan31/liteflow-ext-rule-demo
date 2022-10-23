@@ -1,0 +1,8 @@
+spring:
+    application:
+        name: liteflow-etcd
+
+liteflow:
+    rule-source-ext-data-map:
+        connectStr: http://182.254.246.42:2379
+        nodePath: /liteflow/rule

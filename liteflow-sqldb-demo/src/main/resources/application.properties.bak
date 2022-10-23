@@ -7,5 +7,3 @@ liteflow.rule-source-ext-data={\
   "tableName":"chain",\
   "elDataField":"el_data"\
   }
-
-
