@@ -10,5 +10,3 @@ liteflow:
     password: 123456
     tableName: chain
     elDataField: el_data
-
-
