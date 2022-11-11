@@ -4,5 +4,6 @@ spring:
 
 liteflow:
     rule-source-ext-data-map:
-        connectStr: http://182.254.246.42:2379
-        nodePath: /liteflow/rule
+        endpoints: http://182.254.246.42:2379
+        chainPath: /liteflow/chain
+        scriptPath: /liteflow/script

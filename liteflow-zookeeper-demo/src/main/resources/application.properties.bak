@@ -1,5 +1,6 @@
 spring.application.name=liteflow-zookeeper
 liteflow.rule-source-ext-data={\
   "connectStr":"182.254.246.42:2181",\
-  "nodePath":"/liteflow/rule"\
+  "chainPath":"/liteflow/chain",\
+  "scriptPath":"/liteflow/script"\
 }

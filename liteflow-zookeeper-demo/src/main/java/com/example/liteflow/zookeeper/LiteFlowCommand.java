@@ -2,6 +2,7 @@ package com.example.liteflow.zookeeper;
 
 import com.yomahub.liteflow.core.FlowExecutor;
 import com.yomahub.liteflow.flow.LiteflowResponse;
+import com.yomahub.liteflow.slot.DefaultContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -26,6 +27,9 @@ public class LiteFlowCommand implements CommandLineRunner {
             }else{
                 log.info("执行失败");
             }
+            DefaultContext context = response.getFirstContextBean();
+            Integer result = context.getData("s1");
+            log.info(result.toString());
             Thread.sleep(2000L);
         }
     }

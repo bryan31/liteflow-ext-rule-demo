@@ -28,6 +28,5 @@ public class LiteFlowCommand implements CommandLineRunner {
             }
             Thread.sleep(2000L);
         }
-
     }
 }

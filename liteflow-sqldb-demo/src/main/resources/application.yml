@@ -8,5 +8,16 @@ liteflow:
     driverClassName: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
-    tableName: chain
+    applicationName: demo
+    #以下是chain表的配置，这个一定得有
+    chainTableName: chain
+    chainApplicationNameField: application_name
+    chainNameField: chain_name
     elDataField: el_data
+    #以下是script表的配置，如果你没使用到脚本，下面可以不配置
+    scriptTableName: script
+    scriptApplicationNameField: application_name
+    scriptIdField: script_id
+    scriptNameField: script_name
+    scriptDataField: script_data
+    scriptTypeField: script_type
