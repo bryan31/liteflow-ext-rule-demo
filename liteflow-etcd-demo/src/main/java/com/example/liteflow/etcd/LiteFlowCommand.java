@@ -2,6 +2,8 @@ package com.example.liteflow.etcd;
 
 import com.yomahub.liteflow.core.FlowExecutor;
 import com.yomahub.liteflow.flow.LiteflowResponse;
+import com.yomahub.liteflow.slot.DefaultContext;
+import com.yomahub.liteflow.util.JsonUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -21,8 +23,10 @@ public class LiteFlowCommand implements CommandLineRunner {
     public void run(String... args) throws Exception {
         while (true) {
             LiteflowResponse response = flowExecutor.execute2Resp("chain1", "arg");
+            DefaultContext context = response.getFirstContextBean();
             if (response.isSuccess()){
                 log.info("执行成功");
+                log.info(JsonUtil.toJsonString(context.getData("student")));
             }else{
                 log.info("执行失败");
             }
