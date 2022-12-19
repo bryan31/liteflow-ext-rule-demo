@@ -27,9 +27,6 @@ public class LiteFlowCommand implements CommandLineRunner {
             }else{
                 log.info("执行失败");
             }
-            DefaultContext context = response.getFirstContextBean();
-            Integer result = context.getData("s1");
-            log.info(result.toString());
             Thread.sleep(2000L);
         }
     }
