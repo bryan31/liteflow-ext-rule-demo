@@ -9,5 +9,4 @@ public class LiteflowMysqlApplication {
     public static void main(String[] args) {
         SpringApplication.run(LiteflowMysqlApplication.class, args);
     }
-
 }
