@@ -14,7 +14,7 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-boot.version>2.7.5</spring-boot.version>
-        <liteflow.version>2.9.7</liteflow.version>
+        <liteflow.version>2.10.1</liteflow.version>
     </properties>
 
     <dependencyManagement>
