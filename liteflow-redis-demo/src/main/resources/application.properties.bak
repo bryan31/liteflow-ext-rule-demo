@@ -1,0 +1,14 @@
+spring.application.name=liteflow-redis
+liteflow.rule-source-ext-data={\
+      "host":"127.0.0.1",\
+      "port":6379,\
+      "username":"root",\
+      "password":"123456",\
+      "mode":"poll",\
+      "pollingInterval":1,\
+      "pollingStartTime":1,\
+      "chainDataBase":1,\
+      "chainKey":"chainKey",\
+      "scriptDataBase":1,\
+      "scriptKey":"scriptKey"\
+}
