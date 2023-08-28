@@ -1,6 +1,6 @@
 spring:
     application:
-        name: liteflow-nacos
+       name: liteflow-nacos
 
 liteflow:
     rule-source-ext-data-map:
