@@ -1,0 +1,19 @@
+spring:
+    application:
+        name: liteflow-redis
+
+liteflow:
+    rule-source-ext-data-map:
+        host: 127.0.0.1
+        port: 6379
+        #如果你没有用户名或密码可以不配置
+        username: root
+        password: 123456
+        mode: poll
+        pollingInterval: 1
+        pollingStartTime: 1
+        chainDataBase: 1
+        chainKey: chainKey
+        #如果你没有脚本组件，以下可以不配置
+        scriptDataBase: 1
+        scriptKey: scriptKey
