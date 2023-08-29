@@ -3,6 +3,6 @@ spring:
     name: liteflow-zookeeper
 liteflow:
   rule-source-ext-data-map:
-    connectStr: 182.254.246.42:2181
+    connectStr: 127.0.0.1:2181
     chainPath: /liteflow/chain
     scriptPath: /liteflow/script

@@ -1,6 +1,37 @@
 1.把配置中的信息替换成你自己的链接信息
 2.节点中存的规则文件为：
-THEN(a,b,c);
+
+建立一个hash结构的key：chains
+
+内部key为chain1
+value为THEN(a,b,c,s1)
+
+再建立一个脚本的key: scripts
+
+内部key为：s1:script:名字
+
+value为：
+
+import cn.hutool.core.date.DateUtil
+
+def date = DateUtil.parse("2022-10-17 13:31:43")
+println(date)
+defaultContext.setData("demoDate", date)
+
+class Student {
+   int studentID
+   String studentName
+}
+
+Student student = new Student()
+student.studentID = 100301
+student.studentName = "张三"
+defaultContext.setData("student",student)
+
+def a=3
+def b=2
+defaultContext.setData("s1",a*b)
+
 3.直接运行启动类即可，会自动执行LiteFLowCommand类中的方法。
 4.可自己增加组件，替换规则。
 5.执行类中每2秒运行一次，为什么要循环，是为了方便你测试热刷新。目前配置为轮询模式1秒轮询一次，可直接在redis里改规则即可。会实时刷新规则，执行结果会变。

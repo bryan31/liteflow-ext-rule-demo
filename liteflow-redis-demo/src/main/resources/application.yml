@@ -7,13 +7,13 @@ liteflow:
         host: 127.0.0.1
         port: 6379
         #如果你没有用户名或密码可以不配置
-        username: root
+        username:
         password: 123456
         mode: poll
-        pollingInterval: 1
+        pollingInterval: 5
         pollingStartTime: 1
-        chainDataBase: 1
-        chainKey: chainKey
+        chainDataBase: 0
+        chainKey: chains
         #如果你没有脚本组件，以下可以不配置
-        scriptDataBase: 1
-        scriptKey: scriptKey
+        scriptDataBase: 0
+        scriptKey: scripts
