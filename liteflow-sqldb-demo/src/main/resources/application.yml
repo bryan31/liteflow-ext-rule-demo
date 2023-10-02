@@ -21,3 +21,8 @@ liteflow:
     scriptNameField: script_name
     scriptDataField: script_data
     scriptTypeField: script_type
+    #以下是轮询机制的配置
+    pollingEnabled: true
+    pollingStartSeconds: 0
+    pollingIntervalSeconds: 5
+
