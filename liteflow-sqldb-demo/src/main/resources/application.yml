@@ -14,6 +14,7 @@ liteflow:
     chainApplicationNameField: application_name
     chainNameField: chain_name
     elDataField: el_data
+    chainEnableField: enable
     #以下是script表的配置，如果你没使用到脚本，下面可以不配置
     scriptTableName: script
     scriptApplicationNameField: application_name
@@ -21,6 +22,8 @@ liteflow:
     scriptNameField: script_name
     scriptDataField: script_data
     scriptTypeField: script_type
+    scriptLanguageField: language
+    scriptEnableField: enable
     #以下是轮询机制的配置
     pollingEnabled: true
     pollingStartSeconds: 0

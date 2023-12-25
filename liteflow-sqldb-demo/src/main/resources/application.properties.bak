@@ -1,18 +1,24 @@
 spring.application.name=liteflow-mysql
+spring.datasource.url=jdbc:mysql://localhost:3306/poseidon
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.username=root
+spring.datasource.password=123456
 liteflow.rule-source-ext-data={\
-  "url":"jdbc:mysql://localhost:3306/poseidon",\
-  "driverClassName":"com.mysql.cj.jdbc.Driver",\
-  "username":"root",\
-  "password":"123456",\
   "applicationName": "demo",\
   "chainTableName": "chain",\
   "chainApplicationNameField": "application_name",\
   "chainNameField": "chain_name",\
   "elDataField": "el_data",\
+  "chainEnableField": "enable",\
   "scriptTableName": "script",\
   "scriptApplicationNameField": "application_name",\
   "scriptIdField": "script_id",\
   "scriptNameField": "script_name",\
   "scriptDataField": "script_data",\
-  "scriptTypeField": "script_type"
+  "scriptTypeField": "script_type",\
+  "scriptLanguageField": "language",\
+  "scriptEnableField": "enable",\
+  "pollingEnabled": true,\
+  "pollingStartSeconds": 0,\
+  "pollingIntervalSeconds": 5\
   }
