@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 
 @Component
-public class LiteFlowCommand implements CommandLineRunner {
+public class LiteFlowCommand1 implements CommandLineRunner {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 

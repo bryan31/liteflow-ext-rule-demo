@@ -14,6 +14,8 @@ liteflow:
     chainApplicationNameField: application_name
     chainNameField: chain_name
     elDataField: el_data
+    routeField: route
+    namespaceField: namespace
     chainEnableField: enable
     #以下是script表的配置，如果你没使用到脚本，下面可以不配置
     scriptTableName: script
@@ -28,4 +30,6 @@ liteflow:
     pollingEnabled: true
     pollingStartSeconds: 0
     pollingIntervalSeconds: 5
+
+  parse-mode: parse_one_on_first_exec
 

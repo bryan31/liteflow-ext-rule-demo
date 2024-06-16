@@ -6,6 +6,8 @@ create table chain
     chain_name       varchar(32) null,
     chain_desc       varchar(64) null,
     el_data          text        null,
+    route            text        null,
+    namespace        varchar(32),
     create_time      datetime    null,
     enable           tinyint(1)  1
 );
