@@ -1,13 +1,28 @@
 spring:
   application:
     name: liteflow-mysql
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/poseidon
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 5
+      max-active: 20
+      max-wait: 60000
+      min-evictable-idle-time-millis: 30000
+      validation-query: select 'x'
+      test-on-borrow: false
+      test-on-return: false
+      filters: stat,wall,logback
+      stat-view-servlet:
+        allow: 127.0.0.1
+        enabled: true
+        reset-enable: false
+
 
 liteflow:
   rule-source-ext-data-map:
-    url: jdbc:mysql://localhost:3306/poseidon
-    driverClassName: com.mysql.cj.jdbc.Driver
-    username: root
-    password: 123456
     applicationName: demo
     #以下是chain表的配置，这个一定得有
     chainTableName: chain
@@ -30,6 +45,7 @@ liteflow:
     pollingEnabled: true
     pollingStartSeconds: 0
     pollingIntervalSeconds: 5
-
   parse-mode: parse_one_on_first_exec
 
+server:
+  port: 8686
