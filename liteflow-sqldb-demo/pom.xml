@@ -43,6 +43,13 @@
             <artifactId>liteflow-script-groovy</artifactId>
             <version>${liteflow.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.yomahub</groupId>
+            <artifactId>liteflow-script-javax</artifactId>
+            <version>${liteflow.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>com.yomahub</groupId>
             <artifactId>liteflow-script-aviator</artifactId>
@@ -52,7 +59,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.1.22</version>
+            <version>1.1.21</version>
         </dependency>
     </dependencies>
 </project>
