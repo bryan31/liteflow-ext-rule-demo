@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.List;
 
+//策略路由
+
 //@Component
 public class LiteFlowCommand2 implements CommandLineRunner {
 
