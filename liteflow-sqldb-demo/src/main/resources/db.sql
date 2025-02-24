@@ -52,28 +52,36 @@ defaultContext.setData("s1",a*b)', 'script', 'groovy', 1);
 INSERT INTO script (id, application_name, script_id, script_name, script_data, script_type, language, enable) VALUES (2, 'demo', 's2', '脚本s2', 'defaultContext.setData("s2","hello")', 'script', 'groovy', 1);
 INSERT INTO script (id, application_name, script_id, script_name, script_data, script_type, language, enable) VALUES (3, 'demo', 's3', '脚本s3', 'setData(defaultContext, "s3", 5*6);', 'script', 'aviator', 1);
 INSERT INTO script (id, application_name, script_id, script_name, script_data, script_type, language, enable) VALUES (4, 'demo', 's4', '脚本4', 'import cn.hutool.core.collection.ListUtil;
-            import com.yomahub.liteflow.script.body.CommonScriptBody;
-            import com.yomahub.liteflow.slot.DefaultContext;
-            import com.yomahub.liteflow.spi.holder.ContextAwareHolder;
-            import com.example.liteflow.mysql.vo.Person;
-            import com.yomahub.liteflow.script.ScriptExecuteWrap;
-            import java.util.List;
-            import java.util.function.ToIntFunction;
+import com.example.liteflow.mysql.vo.Person;
+import com.yomahub.liteflow.core.NodeComponent;
+import com.yomahub.liteflow.slot.DefaultContext;
 
-            public class Demo implements CommonScriptBody {
-                public Void body(ScriptExecuteWrap wrap) {
-                    DefaultContext ctx = wrap.getCmp().getFirstContextBean();
-                    List<Person> personList = ListUtil.toList(
-                            new Person("jack", 15000),
-                            new Person("tom", 23500),
-                            new Person("peter", 18500)
-                    );
+import java.util.List;
 
-                    int totalSalary = personList.stream().mapToInt(Person::getSalary).sum();
+public class S1Cmp extends NodeComponent {
+    @Override
+    public void process() throws Exception {
+        DefaultContext ctx = this.getFirstContextBean();
+        List<Person> personList = ListUtil.toList(
+                new Person("jack", 15000),
+                new Person("tom", 23500),
+                new Person("peter", 18500)
+        );
 
-                    System.out.println(totalSalary);
-                    ctx.setData("salary", totalSalary);
+        int totalSalary = personList.stream().mapToInt(Person::getSalary).sum();
 
-                    return null;
-                }
-            }', 'script', 'java', 1);
+        System.out.println(totalSalary);
+        ctx.setData("salary", totalSalary);
+    }
+
+    @Override
+    public void onSuccess() throws Exception {
+        System.out.println("succeed");
+    }
+
+    @Override
+    public boolean isAccess() {
+        System.out.println("isAccess");
+        return true;
+    }
+}', 'script', 'java', 1);

@@ -46,7 +46,7 @@
 
         <dependency>
             <groupId>com.yomahub</groupId>
-            <artifactId>liteflow-script-javax</artifactId>
+            <artifactId>liteflow-script-javax-pro</artifactId>
             <version>${liteflow.version}</version>
         </dependency>
 

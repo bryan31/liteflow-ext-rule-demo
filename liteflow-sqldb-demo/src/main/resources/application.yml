@@ -45,7 +45,7 @@ liteflow:
     pollingEnabled: true
     pollingStartSeconds: 0
     pollingIntervalSeconds: 5
-  parse-mode: parse_one_on_first_exec
+  enable-node-instance-id: true
 
 server:
   port: 8686
