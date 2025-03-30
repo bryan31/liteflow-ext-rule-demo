@@ -44,7 +44,7 @@ liteflow:
     #以下是轮询机制的配置
     pollingEnabled: true
     pollingStartSeconds: 0
-    pollingIntervalSeconds: 5
+    pollingIntervalSeconds: 10
   enable-node-instance-id: true
 
 server:

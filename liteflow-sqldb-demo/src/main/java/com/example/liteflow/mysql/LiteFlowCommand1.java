@@ -22,16 +22,20 @@ public class LiteFlowCommand1 implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         while(true){
-            LiteflowResponse response = flowExecutor.execute2Resp("chain1", "arg");
-            DefaultContext context = response.getFirstContextBean();
-            System.out.println(JsonUtil.toJsonString(context.getData("student")));
-            System.out.println(context.getData("salary").toString());
-            if (response.isSuccess()){
-                log.info("执行成功");
-            }else{
-                log.info("执行失败");
+            try{
+                LiteflowResponse response = flowExecutor.execute2Resp("chain1", "arg");
+                DefaultContext context = response.getFirstContextBean();
+                System.out.println(JsonUtil.toJsonString(context.getData("student")));
+                System.out.println(context.getData("salary").toString());
+                if (response.isSuccess()){
+                    log.info("执行成功");
+                }else{
+                    log.info("执行失败");
+                }
+                Thread.sleep(2000);
+            }catch (Exception e){
+                e.printStackTrace();
             }
-            Thread.sleep(1000);
         }
     }
 }
