@@ -1,4 +1,10 @@
-create table chain
+create database if not exists poseidon
+character set utf8mb4
+collate utf8mb4_unicode_ci;
+
+use poseidon;
+
+create table if not exists chain
 (
     id               bigint auto_increment
         primary key,
@@ -9,11 +15,11 @@ create table chain
     route            text        null,
     namespace        varchar(32),
     create_time      datetime    null,
-    enable           tinyint(1)  1
+    enable           tinyint(1)  default 1 null
 );
 
 
-create table script
+create table if not exists script
 (
     id               bigint auto_increment
         primary key,
@@ -23,7 +29,7 @@ create table script
     script_data      text        null,
     script_type      varchar(16) null,
     language         varchar(32) null,
-    enable           tinyint(1)  1
+    enable           tinyint(1)  default 1 null
 );
 
 INSERT INTO chain (id, application_name, chain_name, chain_desc, el_data, route, namespace, create_time, enable) VALUES (1, 'demo', 'chain1', '测试流程', 'THEN(a,b,c,s1,s2,s3,s4);', null, null, '2022-09-19 19:31:00', 1);
